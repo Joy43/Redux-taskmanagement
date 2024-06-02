@@ -4,7 +4,6 @@ import {
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
-import { Children } from "react";
 
 function Modal({ isOpen, setIsOpen, title, children }) {
   return (
@@ -16,10 +15,12 @@ function Modal({ isOpen, setIsOpen, title, children }) {
         className="relative z-50"
       >
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-          <DialogPanel className="max-w-lg space-y-4 border bg-white p-12">
-            <DialogTitle className="font-bold">{title}</DialogTitle>
+          <DialogPanel className="max-w-2xl space-y-4 space-x-3 border bg-white p-12">
+            <DialogTitle className=" text-center text-lg font-extralight">
+              {title}
+            </DialogTitle>
             {children}
-            <Description>
+            {/* <Description>
               This will permanently deactivate your account
             </Description>
             <p>
@@ -29,7 +30,7 @@ function Modal({ isOpen, setIsOpen, title, children }) {
             <div className="flex gap-4">
               <button onClick={() => setIsOpen(false)}>Cancel</button>
               <button onClick={() => setIsOpen(false)}>Deactivate</button>
-            </div>
+            </div> */}
           </DialogPanel>
         </div>
       </Dialog>
