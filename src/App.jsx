@@ -1,8 +1,12 @@
 import "./App.css";
-import Home from "./Pages/Home";
+import MainLayout from "./components/layouts/MainLayout";
 
 function App() {
-  return <Home></Home>;
+  return (
+    <>
+      <MainLayout />
+    </>
+  );
 }
 
 export default App;
